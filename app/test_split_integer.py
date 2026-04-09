@@ -2,8 +2,7 @@ from app.split_integer import split_integer
 
 
 def test_sum_or_parts_should_be_equal_to_value() -> None:
-    result = split_integer(17, 4)
-    assert sum(result) == 17
+    assert sum(split_integer(17, 4)) == 17
 
 
 def test_split_integer_should_split_into_equal_parts() -> None:
@@ -22,3 +21,8 @@ def test_difference_between_max_and_min_should_be_less_than_two() -> None:
 
 def test_should_return_part_equals_to_value_with_one_part() -> None:
     assert split_integer(8, 1) == [8]
+
+
+def test_result_should_have_correct_number_of_parts() -> None:
+    number_of_parts = 6
+    assert len(split_integer(32, number_of_parts)) == number_of_parts
