@@ -16,8 +16,7 @@ def test_parts_should_be_sorted_ascending() -> None:
 
 
 def test_difference_between_max_and_min_should_be_less_than_two() -> None:
-    # E501: Acortamos el nombre y la línea para no exceder 79 caracteres
-    result = split_integer(32, 6)
+    result = split_integer(18, 4)
     assert max(result) - min(result) <= 1
 
 
